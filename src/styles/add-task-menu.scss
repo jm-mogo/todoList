@@ -15,48 +15,49 @@
 /* Position the content inside the overlay */
 .overlay-content {
     position: relative;
-    top: 15%; /* 25% from the top */
     width: 100%; /* 100% width */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 form {
     margin: auto;
     display: flex;
     flex-direction: column;
-    width: 400px;
-    height: 400px;
+    width: 340px;
+    height: 500px;
+    border-radius: 20px;
     background: white;
     gap: 20px;
     align-items: center;
-
-    h2 {
-        padding: 20px;
-        font-size: 2rem;
-    }
 }
 
+.titleNewTask {
+    padding: 20px;
+    font-size: 2rem;
+}
 
+.buttons-newTask {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
 
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-    background: none;
+.closebtn,
+.add-task-button {
+    height: 40px;
     border: none;
+    border-radius: 20px;
+    box-shadow: 4px 5px 12px 2px #a3a2a2;
+}
+
+.add-task-button {
+    background: #84d7a9;
 }
 
 .closebtn {
-    color: white;
-}
-
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-    .overlay .closebtn {
-        font-size: 40px;
-        top: 15px;
-        right: 35px;
-    }
+    background: #d65656;
 }

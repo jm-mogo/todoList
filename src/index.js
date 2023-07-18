@@ -13,8 +13,6 @@ function addNewTask() {
 
     displayTasks(me.getTasks())
     closeNav()
-
-    taskName.value = ''
 }
 
 document.getElementById('add-task-button').addEventListener("click", addNewTask)

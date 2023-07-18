@@ -58,11 +58,11 @@
     <div id="myNav" class="overlay">
 
         <!-- Button to close the overlay navigation -->
-        <button class="closebtn" id="closebtn">X</button>
+        
         <!-- Overlay content -->
         <div class="overlay-content">
             <form>
-                <h2>New task</h2>
+                <h2 class="titleNewTask">New task</h2>
             
                 <div>
                     <label for="task-name">Task name</label>
@@ -76,7 +76,11 @@
                         <option value="high">High</option>
                     </select>
                 </div>
-                <button class="add-task-button" id="add-task-button" type="button">Add task</button>
+                <div class="buttons-newTask">
+                    <button class="add-task-button" id="add-task-button" type="button">Add task</button>
+                    <button class="closebtn" id="closebtn" type="button">Cancel</button>
+                </div>
+                
             </form>
             
         </div>
