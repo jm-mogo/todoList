@@ -11,21 +11,65 @@
     <header>
         Todo list
     </header>
-    <nav role="navigation">
-        <div id="menuToggle">
-            <input type="checkbox" />
-            <span></span>
-            <span></span>
-            <span></span>
-            <div id="menu">
-                <p>My projects</p>
+    <div class="content">
+        <div class="navigation">
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+                <div id="menu">
+                    <p>My projects</p>
+                </div>
             </div>
         </div>
-    </nav>
-    <div class="toDos-section">
-        
+        <div class="todo-list" id="todo-list">
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+            <div class="task"></div>
+        </div>
     </div>
-    <button class="add-task-button">
+
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <button class="closebtn" id="closebtn">X</button>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            <p>add task</p>
+            <p>description</p>
+            <p>due time</p>
+            <p>priority</p>
+        </div>
+
+    </div>
+
+    <button class="add-task-button" id="add-task-button">
         +
     </button>
 </body>
