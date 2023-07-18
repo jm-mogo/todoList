@@ -61,15 +61,29 @@
         <button class="closebtn" id="closebtn">X</button>
         <!-- Overlay content -->
         <div class="overlay-content">
-            <p>add task</p>
-            <p>description</p>
-            <p>due time</p>
-            <p>priority</p>
+            <form>
+                <h2>New task</h2>
+            
+                <div>
+                    <label for="task-name">Task name</label>
+                    <input type="text" id="task-name" placeholder="Task name">
+                </div>
+                <div>
+                    <label for="priority">Priority</label>
+                    <select name="priority" id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <button class="add-task-button" id="add-task-button" type="button">Add task</button>
+            </form>
+            
         </div>
 
     </div>
 
-    <button class="add-task-button" id="add-task-button">
+    <button class="new-task-button" id="new-task-button">
         +
     </button>
 </body>
