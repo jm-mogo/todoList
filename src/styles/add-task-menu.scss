@@ -72,12 +72,19 @@ form {
     border: none;
     border-radius: 20px;
     box-shadow: 4px 5px 12px 2px #a3a2a2;
+    transition: 0.2s;
 }
 
 .add-task-button {
     background: #84d7a9;
 }
 
+
 .closebtn {
     background: #d65656;
+}
+
+.add-task-button:hover,
+.closebtn:hover {
+    scale: 1.08;
 }
