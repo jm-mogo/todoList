@@ -4,8 +4,8 @@ const tasksList = document.getElementById("tasksList");
 function createTaskDiv(task) {
     let div = document.createElement("div");
     div.classList.add("task");
-
-    div.innerText = task;
+    div.classList.add(`priority-${task.priority}`)
+    div.innerText = task.title;
     return div;
 }
 
@@ -20,7 +20,7 @@ export default function printTasks(tasks, projectName) {
         return
     }
     for (let i = 0; i < tasks.length; i++) {
-        tasksList.appendChild(createTaskDiv(tasks[i].title));
+        tasksList.appendChild(createTaskDiv(tasks[i]));
     }
 
 } 

@@ -5,7 +5,11 @@ import { closeNav } from "../ui/displayAddTaskMenu.js";
 export default function addNewTask() {
     const project = projectsManager.getCurrentProject()
     let taskName = document.getElementById("task-name")
-    project.addTask(taskName.value)
+    let taskPriority = document.getElementById("priority")
+    
+    project.addTask(taskName.value, taskPriority.value, "hello, im the description")
+
+    console.table(project)
 
     displayTasks(project.getTasks(), project.name)
     closeNav()
