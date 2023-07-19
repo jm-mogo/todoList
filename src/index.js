@@ -1,18 +1,22 @@
 import "./style.scss";
 import Project from "./modules/Project.js";
+import addNewTask from "./modules/addNewTaskToProject";
 import displayTasks from "./ui/displayTasks.js";
-import {closeNav} from "./ui/displayAddTaskMenu.js";
+import displayProjects from "./ui/displayProjects.js"
+import ProjectsManager from "./modules/ProjectsManager";
 
-const me = new Project("Me");
+const work = new Project("Work");
+const home = new Project("Home");
+const school = new Project("School");
 
-displayTasks(me.getTasks());
+export const projectsManager = new ProjectsManager()
 
-function addNewTask() {
-    let taskName = document.getElementById("task-name")
-    me.addTask(taskName.value)
+projectsManager.addNewProject(work)
+projectsManager.addNewProject(home)
+projectsManager.addNewProject(school)
 
-    displayTasks(me.getTasks())
-    closeNav()
-}
 
-document.getElementById('add-task-button').addEventListener("click", addNewTask)
+displayProjects(projectsManager.getProjects())
+
+
+displayTasks(projectsManager.getCurrentProject().getTasks(), projectsManager.getCurrentProject().name)
