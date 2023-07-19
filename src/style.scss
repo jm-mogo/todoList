@@ -99,6 +99,8 @@ header {
     box-shadow: 5px 6px 20px 10px #050c14;
 }
 
+@import "./styles/projects.scss";
+
 //style the mobile menu project
 @media only screen and (max-width: 600px) {
     @import "./styles/project-menu-mobile.scss";
