@@ -39,21 +39,29 @@
             <form>
                 <h2 class="titleNewTask">New task</h2>
             
-                <div>
-                    <label for="task-name">Task name</label>
+                <div class="input-new-task">
+                    <label for="task-name">Task name:</label>
                     <input type="text" id="task-name" placeholder="Task name">
                 </div>
-                <div>
-                    <label for="priority">Priority</label>
+                <div class="input-new-task">
+                    <label for="priority">Priority:</label>
                     <select name="priority" id="priority">
                         <option value="low">Low</option>
                         <option value="medium">Medium</option>
                         <option value="high">High</option>
                     </select>
                 </div>
+                <div class="input-new-task">
+                    <label for="due-date">Due date:</label>
+                    <input type="text" id="due-date" placeholder="dd/mm/yyyy">
+                </div>
+                <div class="input-new-task">
+                    <label for="description">Description:</label>
+                    <input type="textarea" id="description">
+                </div>
                 <div class="buttons-newTask">
-                    <button class="add-task-button" id="add-task-button" type="button">Add task</button>
                     <button class="closebtn" id="closebtn" type="button">Cancel</button>
+                    <button class="add-task-button" id="add-task-button" type="button">Add task</button>
                 </div>
                 
             </form>
