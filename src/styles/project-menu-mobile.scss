@@ -85,7 +85,7 @@
     padding: 50px;
     padding-top: 82px;
     width: 65vw;
-    min-height: 65vh;
+    min-height: calc(90vh - 132px);
     background: $white;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
