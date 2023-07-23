@@ -1,13 +1,26 @@
 const title = document.getElementById("project-title");
 const tasksList = document.getElementById("tasksList");
 
+function createPriorityDiv(task) {
+    let div = document.createElement("div");
+    div.classList.add(`priority-${task.priority}`)
+    
+    console.log(div)
+    return div;
+}
+
 function createTaskDiv(task) {
     let div = document.createElement("div");
     div.classList.add("task");
-    div.classList.add(`priority-${task.priority}`)
-    div.innerText = task.title;
+    
+    
+
+    div.textContent += task.title; 
+
+    div.appendChild(createPriorityDiv(task))
     return div;
 }
+
 
 function printProjectName(projectName) {
     title.textContent = projectName

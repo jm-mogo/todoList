@@ -1,5 +1,6 @@
 import { projectsManager } from "..";
 import displayTasks from "../ui/displayTasks"
+import closeProjectMenu from "../ui/closeProjectMenu";
 
 export default function changeCurrentProject() {
     projectsManager.setId(this.id)
@@ -7,7 +8,3 @@ export default function changeCurrentProject() {
     displayTasks(projectsManager.getCurrentProject().getTasks(), projectsManager.getCurrentProject().name)
 }
 
-function closeProjectMenu() {
-    const menu = document.getElementById("menuCheck")
-    menu.checked = false
-}
