@@ -42,6 +42,11 @@ function createTaskDiv(task, id) {
     div.appendChild(createPriorityDiv(task));
     div.appendChild(createCheckbox(task, id));
     div.appendChild(createTaskTitle(task));
+
+    if (task.checked) {
+        div.classList.add("checked-task")
+    }
+
     return div;
 }
 

@@ -63,11 +63,15 @@
 
 
 .input-task-checkbox {
-    width: 32px;
+    margin-left: 10px;
+    margin-right: 10px;
     height: 100%;
     display: flex;
-    align-content: center;
     justify-content: center;
+}
+
+.checked-task {
+    text-decoration: line-through;
 }
 
 .new-task-button {
