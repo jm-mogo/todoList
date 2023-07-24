@@ -9,8 +9,6 @@ export default function addNewTask() {
     
     project.addTask(taskName.value, taskPriority.value, "hello, im the description")
 
-    console.table(project)
-
     displayTasks(project.getTasks(), project.name)
     closeNav()
 }

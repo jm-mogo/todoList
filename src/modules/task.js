@@ -3,6 +3,7 @@ export default class task {
         this.title = title;
         this.priority = priority;
         this.description = description;
+        this.checked = false
     }
 
     setDescription(description) {

@@ -47,7 +47,6 @@
     width: 24px;
     height: 100%;
     border-radius: 8px 0px 0px 8px;
-    cursor: pointer;
 }
 
 .priority-low {
@@ -60,6 +59,15 @@
 
 .priority-high {
     background-color: red;
+}
+
+
+.input-task-checkbox {
+    width: 32px;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
 
 .new-task-button {
