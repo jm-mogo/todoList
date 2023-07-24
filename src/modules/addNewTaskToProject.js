@@ -4,12 +4,15 @@ import { closeNav } from "../ui/displayAddTaskMenu.js";
 
 export default function addNewTask() {
     const project = projectsManager.getCurrentProject();
-    let taskName = document.getElementById("task-name");
-    let taskPriority = document.getElementById("priority");
-    let taskDescription = document.getElementById("description");
+    const taskName = document.getElementById("task-name");
+    const taskPriority = document.getElementById("priority");
+    const taskDescription = document.getElementById("description");
+    const taskDate = document.getElementById("due-date")
 
-    project.addTask(taskName.value, taskPriority.value);
+    project.addTask(taskName.value, taskPriority.value, taskDescription.value, taskDate.value);
 
+    console.table(project)
+    
     displayTasks(project.getTasks(), project.name);
     closeNav();
 }

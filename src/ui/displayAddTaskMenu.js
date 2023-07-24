@@ -1,7 +1,12 @@
+import task from "../modules/task";
+
 const taskName = document.getElementById("task-name")
+const taskPriority = document.getElementById("priority");
+const taskDescription = document.getElementById("description");
 
 function cleanInputAreas() {
     taskName.value = ""
+    taskDescription.value = ""
 }
 
 function openNav() {

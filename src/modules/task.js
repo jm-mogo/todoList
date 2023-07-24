@@ -1,9 +1,10 @@
 export default class task {
-    constructor(title, priority, description = "") {
+    constructor(title, priority, description = "", date = "") {
         this.title = title;
         this.priority = priority;
         this.description = description;
         this.checked = false
+        this.dueDate = date
     }
 
     setDescription(description) {

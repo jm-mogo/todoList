@@ -6,8 +6,8 @@ export default class Project {
         this.tasks = []
     }
     
-    addTask(name, priority, description) {
-        this.tasks.push(new Task(name, priority, description))
+    addTask(name, priority, description, dueDate) {
+        this.tasks.push(new Task(name, priority, description, dueDate))
     } 
 
     getTasks() {

@@ -35,6 +35,14 @@ function createTaskTitle(task) {
     return div;
 }
 
+function createTaskDueDate(task) {
+    let div = document.createElement("div") 
+    div.classList.add("task-dueDate")
+    div.textContent = task.dueDate
+
+    return div
+}
+
 function createTaskDiv(task, id) {
     let div = document.createElement("div");
     div.classList.add("task");
@@ -42,6 +50,7 @@ function createTaskDiv(task, id) {
     div.appendChild(createPriorityDiv(task));
     div.appendChild(createCheckbox(task, id));
     div.appendChild(createTaskTitle(task));
+    div.appendChild(createTaskDueDate(task))
 
     if (task.checked) {
         div.classList.add("checked-task")
