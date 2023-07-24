@@ -33,6 +33,21 @@
     width: 80%;
     border-radius: 10px;
     background-color: #eef2fa;
+    display: flex;
+    align-items: center;
+}
+
+.task-title {
+    font-size: 22px;
+}
+
+.priority {
+    position: relative;
+    margin-left: 0;
+    width: 24px;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
+    cursor: pointer;
 }
 
 .priority-low {
