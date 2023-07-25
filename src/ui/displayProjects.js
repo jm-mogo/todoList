@@ -14,6 +14,8 @@ function createProjectButton(project, index) {
 export default function printProjects(projects) {
     const projectSection = document.getElementById("projects");
 
+    projectSection.innerHTML = ""
+
     for (let i = 0; i < projects.length; i++) {
         projectSection.appendChild(createProjectButton(projects[i], i));
     }

@@ -4,6 +4,7 @@ import addNewTask from "./modules/addNewTaskToProject";
 import displayTasks from "./ui/displayTasks.js";
 import displayProjects from "./ui/displayProjects.js";
 import ProjectsManager from "./modules/ProjectsManager";
+import addNewProject from "./modules/addNewProject";
 
 const work = new Project("Work");
 const home = new Project("Home");
