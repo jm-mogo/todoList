@@ -2,11 +2,16 @@ import { projectsManager } from "..";
 import Project from "./Project";
 import displayProjects from "../ui/displayProjects.js";
 
-let newProject = document.getElementById("add-new-project-input");
+const newProject = document.getElementById("add-new-project-input");
+
+function cleanInput() {
+    newProject.value = ""
+}
 
 export default function addNewProject() {
     projectsManager.addNewProject(new Project(newProject.value));
     displayProjects(projectsManager.getProjects())
+    cleanInput()
 }
 
 document
