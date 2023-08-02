@@ -1,4 +1,5 @@
 import changeCheckedTask from "../modules/changeCheckedTask";
+import deleteTask from "../modules/deleteTask.js"
 
 const title = document.getElementById("project-title");
 const tasksList = document.getElementById("tasksList");
@@ -13,14 +14,13 @@ function createPriorityDiv(task) {
 function createCheckbox(task, id) {
     let label = document.createElement("label");
 
-    label.setAttribute("id", id)
-    label.setAttribute("for", `checkbox-${id}`)
-    label.classList.add("input-task-checkbox")
+    label.setAttribute("id", id);
+    label.setAttribute("for", `checkbox-${id}`);
+    label.classList.add("input-task-checkbox");
 
     label.innerHTML = `<input type="checkbox" ${
-                            task.checked ? "checked" : ""
-                        } id="checkbox-${id}">`
-
+        task.checked ? "checked" : ""
+    } id="checkbox-${id}">`;
 
     label.addEventListener("click", changeCheckedTask);
     return label;
@@ -36,11 +36,23 @@ function createTaskTitle(task) {
 }
 
 function createTaskDueDate(task) {
-    let div = document.createElement("div") 
-    div.classList.add("task-dueDate")
-    div.textContent = task.dueDate
+    let div = document.createElement("div");
+    div.classList.add("task-dueDate");
+    div.textContent = task.dueDate;
 
-    return div
+    return div;
+}
+
+function createDeleteButton(id) {
+    let button = document.createElement("button");
+
+    button.textContent = "delete"
+
+    button.addEventListener("click", () => {
+        deleteTask(id)
+    })
+
+    return button;
 }
 
 function createTaskDiv(task, id) {
@@ -50,10 +62,11 @@ function createTaskDiv(task, id) {
     div.appendChild(createPriorityDiv(task));
     div.appendChild(createCheckbox(task, id));
     div.appendChild(createTaskTitle(task));
-    div.appendChild(createTaskDueDate(task))
+    div.appendChild(createTaskDueDate(task));
+    div.appendChild(createDeleteButton(id));
 
     if (task.checked) {
-        div.classList.add("checked-task")
+        div.classList.add("checked-task");
     }
 
     return div;
