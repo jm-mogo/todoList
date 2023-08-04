@@ -1,6 +1,7 @@
 import { projectsManager } from "..";
 import Project from "./Project";
 import displayProjects from "../ui/displayProjects.js";
+import checkInputValue from "./checkInputValue";
 
 const newProject = document.getElementById("add-new-project-input");
 
@@ -9,9 +10,13 @@ function cleanInput() {
 }
 
 export default function addNewProject() {
-    projectsManager.addNewProject(new Project(newProject.value));
-    displayProjects(projectsManager.getProjects())
-    cleanInput()
+    if (checkInputValue(newProject.value)) {
+        projectsManager.addNewProject(new Project(newProject.value));
+        displayProjects(projectsManager.getProjects())
+        cleanInput()
+    } else {
+        alert("Don't let it blank")
+    }
 }
 
 document

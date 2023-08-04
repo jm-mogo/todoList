@@ -29,6 +29,12 @@
     border: none;
     border-radius: 10px;
     box-shadow: 4px 4px 17px gray;
+    width: 70%;
+}
+
+.project-section {
+    display: flex;
+    justify-content: space-between;
 }
 
 .projects {

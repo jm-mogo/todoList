@@ -1,6 +1,7 @@
 import { projectsManager } from "..";
 import displayTasks from "../ui/displayTasks.js";
 import { closeNav } from "../ui/displayAddTaskMenu.js";
+import checkInputValue from "./checkInputValue";
 
 export default function addNewTask() {
     const project = projectsManager.getCurrentProject();
@@ -9,12 +10,16 @@ export default function addNewTask() {
     const taskDescription = document.getElementById("description");
     const taskDate = document.getElementById("due-date")
 
-    project.addTask(taskName.value, taskPriority.value, taskDescription.value, taskDate.value);
-
-    console.table(project)
+    if (checkInputValue(taskName.value)) {
+        project.addTask(taskName.value, taskPriority.value, taskDescription.value, taskDate.value);
     
-    displayTasks(project.getTasks(), project.name);
-    closeNav();
+        displayTasks(project.getTasks(), project.name);
+        closeNav();
+    } else {
+        alert("Type a task name")
+    }
+
+    
 }
 
 document

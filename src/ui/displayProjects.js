@@ -26,6 +26,8 @@ function createProjectButton(project, index) {
 function createProject(project, index) {
     let projectSection = document.createElement("div");
 
+    projectSection.classList.add("project-section")
+
     projectSection.appendChild(createProjectButton(project, index));
     projectSection.appendChild(createDeleteProjectButton(index));
 
