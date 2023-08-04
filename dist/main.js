@@ -200,6 +200,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/modules/deleteProject.js":
+/*!**************************************!*\
+  !*** ./src/modules/deleteProject.js ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ deleteProject)\n/* harmony export */ });\n/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! .. */ \"./src/index.js\");\n/* harmony import */ var _ui_displayProjects_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../ui/displayProjects.js */ \"./src/ui/displayProjects.js\");\n\n\n\nfunction deleteProject(id) {\n    let projects = ___WEBPACK_IMPORTED_MODULE_0__.projectsManager.getProjects();\n\n    projects.splice(id, 1);\n\n    (0,_ui_displayProjects_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(projects)\n}\n\n//# sourceURL=webpack://todo-list/./src/modules/deleteProject.js?");
+
+/***/ }),
+
 /***/ "./src/modules/deleteTask.js":
 /*!***********************************!*\
   !*** ./src/modules/deleteTask.js ***!
@@ -246,7 +256,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ printProjects)\n/* harmony export */ });\n/* harmony import */ var _modules_changeCurrentProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/changeCurrentProject */ \"./src/modules/changeCurrentProject.js\");\n\n\nfunction createProjectButton(project, index) {\n    let projectButton = document.createElement(\"button\");\n    projectButton.textContent = project.name;\n    projectButton.setAttribute(\"id\", index);\n    projectButton.classList.add(\"project-button\");\n\n    projectButton.addEventListener(\"click\", _modules_changeCurrentProject__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n    return projectButton;\n}\n\nfunction printProjects(projects) {\n    const projectSection = document.getElementById(\"projects\");\n\n    projectSection.innerHTML = \"\"\n\n    for (let i = 0; i < projects.length; i++) {\n        projectSection.appendChild(createProjectButton(projects[i], i));\n    }\n}\n\n\n//# sourceURL=webpack://todo-list/./src/ui/displayProjects.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ printProjects)\n/* harmony export */ });\n/* harmony import */ var _modules_changeCurrentProject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modules/changeCurrentProject */ \"./src/modules/changeCurrentProject.js\");\n/* harmony import */ var _modules_deleteProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modules/deleteProject */ \"./src/modules/deleteProject.js\");\n\n\n\nfunction createDeleteProjectButton(index) {\n    let button = document.createElement(\"button\");\n\n    button.textContent = \"delete\";\n    button.addEventListener(\"click\", () => {\n        (0,_modules_deleteProject__WEBPACK_IMPORTED_MODULE_1__[\"default\"])(index);\n    });\n\n    return button;\n}\n\nfunction createProjectButton(project, index) {\n    let projectButton = document.createElement(\"div\");\n    projectButton.textContent = project.name;\n    projectButton.setAttribute(\"id\", index);\n    projectButton.classList.add(\"project-button\");\n\n    projectButton.addEventListener(\"click\", _modules_changeCurrentProject__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n    return projectButton;\n}\n\nfunction createProject(project, index) {\n    let projectSection = document.createElement(\"div\");\n\n    projectSection.appendChild(createProjectButton(project, index));\n    projectSection.appendChild(createDeleteProjectButton(index));\n\n    return projectSection;\n}\n\nfunction printProjects(projects) {\n    const projectSection = document.getElementById(\"projects\");\n\n    projectSection.innerHTML = \"\";\n\n    for (let i = 0; i < projects.length; i++) {\n        projectSection.appendChild(createProject(projects[i], i));\n    }\n}\n\n\n//# sourceURL=webpack://todo-list/./src/ui/displayProjects.js?");
 
 /***/ }),
 
