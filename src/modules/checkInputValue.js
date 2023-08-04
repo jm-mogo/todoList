@@ -1,7 +1,7 @@
 export default function checkInputValue(value) {
     if (value.length <= 0) {
-        return false
+        return false;
     }
 
-    return true
+    return true;
 }

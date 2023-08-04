@@ -29,7 +29,6 @@
     border: none;
     border-radius: 10px;
     box-shadow: 4px 4px 17px gray;
-    width: 70%;
 }
 
 .project-section {
@@ -50,9 +49,9 @@
     text-align: left;
     font-size: 1.4rem;
     transition: 0.2s;
+    width: 70%;
 }
 .project-button:hover {
     scale: 1.1;
     background: #afdaff;
 }
-

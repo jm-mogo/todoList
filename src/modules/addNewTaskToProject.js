@@ -8,18 +8,21 @@ export default function addNewTask() {
     const taskName = document.getElementById("task-name");
     const taskPriority = document.getElementById("priority");
     const taskDescription = document.getElementById("description");
-    const taskDate = document.getElementById("due-date")
+    const taskDate = document.getElementById("due-date");
 
     if (checkInputValue(taskName.value)) {
-        project.addTask(taskName.value, taskPriority.value, taskDescription.value, taskDate.value);
-    
+        project.addTask(
+            taskName.value,
+            taskPriority.value,
+            taskDescription.value,
+            taskDate.value
+        );
+
         displayTasks(project.getTasks(), project.name);
         closeNav();
     } else {
-        alert("Type a task name")
+        alert("Type a task name");
     }
-
-    
 }
 
 document
